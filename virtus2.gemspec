@@ -3,13 +3,13 @@
 require File.expand_path('../lib/virtus/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name        = "virtus"
+  gem.name        = "virtus2"
   gem.version     = Virtus::VERSION.dup
-  gem.authors     = [ "Piotr Solnica" ]
-  gem.email       = [ "piotr.solnica@gmail.com" ]
+  gem.authors     = [ "Piotr Solnica", "Daniel Orner" ]
+  gem.email       = [ "dmorner@gmail.com" ]
   gem.description = "Attributes on Steroids for Plain Old Ruby Objects"
   gem.summary     = gem.description
-  gem.homepage    = "https://github.com/solnic/virtus"
+  gem.homepage    = "https://github.com/wishabi/virtus2"
   gem.license     = 'MIT'
 
   gem.require_paths    = [ "lib" ]

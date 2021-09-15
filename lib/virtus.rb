@@ -35,7 +35,11 @@ module Virtus
     end
 
     def target_type
-      attribute.primitive.inspect
+      if attribute.respond_to?(:coercion_error_message)
+        attribute.coercion_error_message
+      else
+        attribute.primitive.inspect
+      end
     end
   end
 
@@ -301,5 +305,6 @@ require 'virtus/attribute/nullify_blank'
 
 require 'virtus/attribute/boolean'
 require 'virtus/attribute/collection'
+require 'virtus/attribute/enum'
 require 'virtus/attribute/hash'
 require 'virtus/attribute/embedded_value'

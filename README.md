@@ -3,7 +3,9 @@
 NOTES
 ------------
 
-Although the original author of this project has moved on to the `dry-` family of gems, we believe that there is still value in the simplicity and elegance of this original library. Hence the republishing of this gem as `virtus2` to continue to improve and update the gem.
+Although the original author of this project has moved on to the `dry-` family of gems, which provides much more power and flexibility, we believe that there is still value in the simplicity and elegance of this original library in cases where that power is unnecessary. Hence the republishing of this gem as `virtus2` to continue to improve and update the gem.
+
+The `dry-` gems have a lot of community support and we would recommend looking there before coming back to this gem only if you think the complexity they provide is more than you need.
 
 Virtus
 ======
@@ -516,6 +518,19 @@ end
 User.new(:birthday => "").birthday # => nil
 ```
 
+### Enums
+
+Virtus supports enums out of the box, represented by a list of Symbols:
+
+```ruby
+class FileProcessor
+  include Virtus.model(strict: true)
+  
+  attribute :mode, Enum[:read, :write]
+end
+processor = FileProcessor.new(mode: :execute) # CoercionError!
+processor = FileProcessor.new(mode: :read).mode # :read
+```
 
 ## Building modules with custom configuration
 
@@ -587,6 +602,8 @@ Virtus is known to work correctly with the following rubies:
 * 1.9.3
 * 2.0.0
 * 2.1.2
+* 2.7.0
+* 3.0.0
 * jruby
 * (probably) rbx
 

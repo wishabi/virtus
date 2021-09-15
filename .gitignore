@@ -36,3 +36,4 @@ Gemfile.lock
 bin/
 
 ## PROJECT::SPECIFIC
+.idea
