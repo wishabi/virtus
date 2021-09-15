@@ -1,24 +1,14 @@
-[gem]: https://rubygems.org/gems/virtus
-[travis]: https://travis-ci.org/solnic/virtus
-[codeclimate]: https://codeclimate.com/github/solnic/virtus
-[coveralls]: https://coveralls.io/r/solnic/virtus
-[inchpages]: http://inch-ci.org/github/solnic/virtus/
+[gem]: https://rubygems.org/gems/virtus2
 
-DISCONTINUED
+NOTES
 ------------
 
-> Working on virtus taught me a lot about handling data in Ruby, which involves coercions, type safety and validation (amongst other things). Even though the project has been successful, and serving well for many people, I decided to build something better. As a result, [dry-types](https://github.com/dry-rb/dry-types), [dry-struct](https://github.com/dry-rb/dry-struct) and [dry-schema](https://github.com/dry-rb/dry-schema) were born. These projects should be considered as virtus' successors, with better separation of concerns and better features. If you're interested in a modern take on same problems that virtus tried to solve, please check out these projects!
->
-> @solnic
+Although the original author of this project has moved on to the `dry-` family of gems, we believe that there is still value in the simplicity and elegance of this original library. Hence the republishing of this gem as `virtus2` to continue to improve and update the gem.
 
 Virtus
 ======
 
-[![Gem Version](https://badge.fury.io/rb/virtus.svg)][gem]
-[![Build Status](https://travis-ci.org/solnic/virtus.svg?branch=master)][travis]
-[![Code Climate](https://codeclimate.com/github/solnic/virtus/badges/gpa.svg)][codeclimate]
-[![Test Coverage](https://codeclimate.com/github/solnic/virtus/badges/coverage.svg)][codeclimate]
-[![Inline docs](http://inch-ci.org/github/solnic/virtus.svg?branch=master)][inchpages]
+[![Gem Version](https://badge.fury.io/rb/virtus2.svg)][gem]
 
 Virtus allows you to define attributes on classes, modules or class instances with
 optional information about types, reader/writer method visibility and coercion
