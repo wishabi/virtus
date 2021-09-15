@@ -4,10 +4,6 @@ module Virtus
   class Attribute
 
     # Type to be used inside attributes as enums.
-    # @example
-    #     class Event < Quiver::BaseModel
-    #       attribute :mode, Quiver::Types::Enum[:read, :write]
-    #     end
     class Enum < Attribute
 
       primitive Axiom::Types::Symbol
