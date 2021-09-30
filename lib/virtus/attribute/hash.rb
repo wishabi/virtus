@@ -101,12 +101,13 @@ module Virtus
       # @see [Attribute#coerce]
       #
       # @api public
-      def coerce(*)
+      def coerce(input)
         coerced = super
+        klass = input.kind_of?(::Hash) ? input.class : ::Hash
 
         return coerced unless coerced.respond_to?(:each_with_object)
 
-        coerced.each_with_object({}) do |(key, value), hash|
+        coerced.each_with_object(klass.new) do |(key, value), hash|
           hash[key_type.coerce(key)] = value_type.coerce(value)
         end
       end

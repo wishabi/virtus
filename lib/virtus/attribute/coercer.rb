@@ -29,7 +29,8 @@ module Virtus
       #
       # @api private
       def call(value)
-        coercers[value.class].public_send(method, value)
+        call_method = (method == :to_hash && value.kind_of?(Hash)) ? :itself : method
+        coercers[value.class].public_send(call_method, value)
       rescue ::Coercible::UnsupportedCoercion
         value
       end
