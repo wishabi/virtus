@@ -1,3 +1,6 @@
+# v2.0.2 2021-09-30
+* [fixed] Support for ActiveSupport's HashWithIndifferentAccess
+
 # v2.0.0 2021-06-07
 
 * [changed] min ruby version is now 2.0 (solnic)
