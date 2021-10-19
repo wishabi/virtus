@@ -1,3 +1,6 @@
+# v2.1.0 2021-10-19
+* [fixed] Arrays of custom Attributes should work now
+
 # v2.0.2 2021-09-30
 * [fixed] Support for ActiveSupport's HashWithIndifferentAccess
 

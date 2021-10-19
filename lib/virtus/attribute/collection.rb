@@ -22,9 +22,10 @@ module Virtus
           if EmbeddedValue.handles?(member) || pending?(member)
             Type.new(primitive, member)
           else
+            member_type = member < Virtus::Attribute ? member : Axiom::Types.infer(member)
             klass.new {
               primitive primitive
-              member_type Axiom::Types.infer(member)
+              member_type member_type
             }
           end
         end
